@@ -3,7 +3,7 @@ import { Commit } from './commits/Commit';
 
 function App() {
   return (
-    <Commit/>
+    <Commit></Commit>
   );
 }
 
