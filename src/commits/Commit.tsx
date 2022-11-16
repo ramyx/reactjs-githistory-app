@@ -1,25 +1,42 @@
 import styled from "styled-components";
+import Table from "../components/Table";
+import { Center } from "../styles/Center";
 
-// Create a Title component that'll render an <h1> tag with some styles
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
 `;
 
-// Create a Wrapper component that'll render a <section> tag with some styles
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
+const SubTitle = styled.h1`
+  font-size: 1.2em;
+  text-align: center;
+  color: blue;
 `;
 
-// Use Title and Wrapper like any other React component – except they're styled!
+const Wrapper = styled.section`
+  padding: 4em;
+`;
+
 export const Commit = () => {
     return (
         <Wrapper>
             <Title>
-                Hello World!
+                Commit History App!
             </Title>
+            <SubTitle>
+                FrontEnd
+            </SubTitle>
+            <Center V H>
+                <Table data={[
+                    { key1: "value11", key2: "value21"},
+                    { key1: "value12", key2: "value22"},
+                    { key1: "value13", key2: "value23"},
+                ]} />
+            </Center>
+            <SubTitle>
+                Backend
+            </SubTitle>
         </Wrapper>
     );
 }
